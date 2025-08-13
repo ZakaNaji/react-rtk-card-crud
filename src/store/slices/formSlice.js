@@ -7,8 +7,12 @@ const formSlice = createSlice({
     cost: 0,
   },
   reducers: {
-    changeName(state, action) {},
-    changeCost(state, action) {},
+    changeName(state, action) {
+      state.name = action.payload;
+    },
+    changeCost(state, action) {
+      state.cost = action.payload;
+    },
   },
 });
 
