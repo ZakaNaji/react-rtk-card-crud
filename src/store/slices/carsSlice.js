@@ -15,10 +15,7 @@ const carsSlice = createSlice({
       state.cars.push({ ...action.payload, id: nanoid() });
     },
     deleteCar(state, action) {
-      return {
-        ...state,
-        cars: [...state.cars.filter((c) => c.id !== action.payload)],
-      };
+      state.cars = state.cars.filter((car) => car.id !== action.payload);
     },
   },
 });
